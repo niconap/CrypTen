@@ -24,8 +24,11 @@ $ python3 scripts/aws_launcher.py \
 import argparse
 import logging
 import os
+import sys
 
-from deeplearning.projects.crypten.examples.multiprocess_launcher import (
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
+from examples.multiprocess_launcher import (
     MultiProcessLauncher,
 )
 

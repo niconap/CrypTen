@@ -51,7 +51,7 @@ def run_experiment(
     with context_manager:
         model = getattr(models, model_name)(pretrained=True)
         model.eval()
-        dataset = datasets.ImageNet(imagenet_folder, split="val", download=download)
+        dataset = datasets.ImageNet(imagenet_folder, split="val")
 
     # define appropriate transforms:
     transform = transforms.Compose(
